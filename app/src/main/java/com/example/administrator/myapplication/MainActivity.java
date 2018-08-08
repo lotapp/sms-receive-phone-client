@@ -72,7 +72,11 @@ public class MainActivity extends AppCompatActivity {
 
     private  void sendSmsContext(Sms sms){
         //发送 POST 请求
-        String sr=SendSMSToServer.sendPost("http://192.168.1.106", sms.JSONStr());
+        //number 手机编号，多号码模式下识别手机号码发送的短信
+        int number=5;
+        //token 验证数据
+        String Token="";
+        String sr=SendSMSToServer.sendPost("https://www.pdflibr.com/SMSServer", sms.JSONStr(number,Token));
         Toast.makeText(this,sr,Toast.LENGTH_LONG).show();
     }
 
