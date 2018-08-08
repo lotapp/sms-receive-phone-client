@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
     private  void sendSmsContext(Sms sms){
         //发送 POST 请求
+        String sr=SendSMSToServer.sendPost("https://www.pdflibr.com", sms.JSONStr());
         String sr=SendSMSToServer.sendPost("http://192.168.1.106", sms.JSONStr());
         Toast.makeText(this,sr,Toast.LENGTH_LONG).show();
     }

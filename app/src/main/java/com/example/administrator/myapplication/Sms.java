@@ -64,11 +64,8 @@ public class Sms {
                 '}';
     }
 
+//    此处应该同时发送认证token的，但是时间仓促，没有实现
     public String JSONStr(){
-        return "address="+address+"&date="+date+"&msg="+msg+"&type="+type;
-/*        return "{\"address\":"+"\""+address+"\" "+
-                ", \"date\":"+"\""+date+"\" "+
-                ", \"msg\":"+"\""+msg+"\" "+
-                ", \"type\":"+"\""+type+"\" }";*/
+        return "address="+address+"&date="+date+"&msg="+msg+"&type="+type+"&number="+1+"&token="+"token";
     }
 }
